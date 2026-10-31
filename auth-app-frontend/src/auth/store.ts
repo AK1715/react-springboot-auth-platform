@@ -54,7 +54,7 @@ const useAuth = create<AuthState>()(persist(
                 });
             }
         },
-        logout: async (silent = false) => {
+        logout: async () => {
             try {
                 // if(!silent){
                 //     await logoutUser();

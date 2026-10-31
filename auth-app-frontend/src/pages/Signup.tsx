@@ -4,7 +4,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { motion } from "framer-motion";
 import { Mail, Lock, User, CheckCircle2Icon, } from "lucide-react";
-import { FaGithub, FaGoogle } from "react-icons/fa";
 import React, { useState } from "react"; 
 import toast from "react-hot-toast";
 import type RegisterData from "@/models/RegisterData";

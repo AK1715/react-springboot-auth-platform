@@ -12,7 +12,7 @@ import toast from 'react-hot-toast';
 
 const UserProfile = () => {
 
-    const [isEditing, setEditing] = useState(false);
+    const [isEditing] = useState(false);
     const user= useAuth((state) => state.user);
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
@@ -45,7 +45,7 @@ const UserProfile = () => {
       setIsOpen(!isOpen);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
       e.preventDefault();
       console.log("new pass:- ", password);
       setPassword("");

@@ -1,4 +1,3 @@
-import useAuth from "@/auth/store";
 import apiClient from "@/config/ApiClient";
 import type LoginData from "@/models/LoginData";
 import type LoginResponseData from "@/models/LoginResponseData";
