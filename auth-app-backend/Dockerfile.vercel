@@ -1,0 +1,25 @@
+# ---------------------------------
+# Build Stage
+# ---------------------------------
+
+FROM eclipse-temurin:25-jdk-alpine AS builder
+
+WORK DIR /app
+
+COPY . .
+
+RUN chmod +x mvnw
+
+RUN .\mvnw clean package -DskipTests
+
+# ---------------------------------
+# Running Stage
+# ---------------------------------
+
+FROM eclipse-temurin:25-jdk-alpine
+
+WORK DIR /app
+
+COPY --from-builder /app/target/*.jar app.jar
+
+CMD ["java", "-jar", "app.jar"]

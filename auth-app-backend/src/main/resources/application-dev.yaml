@@ -4,9 +4,10 @@ server:
 # database connections
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/auth_app
-    username: root
-    password: '$1715Akshay'
+#    url: jdbc:mysql://localhost:3306/auth_app
+    url: jdbc:postgresql://ep-blue-hall-b3mrmuz5-pooler.c-4.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+    username: neondb_owner
+    password: npg_aI1xHrNdGhK9
 
 
 # jpa hibernate configurations
@@ -15,7 +16,8 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
+#        dialect: org.hibernate.dialect.MySQLDialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
   security:
@@ -65,9 +67,12 @@ security:
 
 app:
   cors:
-    front-end-url: http://localhost:5173
+#    front-end-url: http://localhost:5173
+    front-end-url: https://auth-app-frontend-xi-five.vercel.app/
   auth:
     frontend:
-      success-redirect: http://localhost:5173/oauth/success
-      failure-redirect: http://localhost:5173/oauth/failure
+#      success-redirect: http://localhost:5173/oauth/success
+      success-redirect: https://auth-app-frontend-xi-five.vercel.app/oauth/success
+      failure-redirect: https://auth-app-frontend-xi-five.vercel.app/oauth/failure
+#      failure-redirect: http://localhost:5173/oauth/failure
 
