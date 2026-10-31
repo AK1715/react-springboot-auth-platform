@@ -16,7 +16,7 @@ RUN ./mvnw clean package -DskipTests
 # Running Stage
 # ---------------------------------
 
-FROM eclipse-temurin:25-jdk-alpine
+FROM eclipse-temurin:25-jre-alpine
 
 WORKDIR /app
 
