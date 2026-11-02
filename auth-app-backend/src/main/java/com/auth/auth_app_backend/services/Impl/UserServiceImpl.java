@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService {
 //    @CachePut(value = "users", key = "#result.id")
     @Override
     public UserDto getUserByEmail(String email){
-        System.out.println("First email Fetching data from database");
+        System.out.print("First email Fetching data from database");
         User user = userRepository
                 .findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found with the given mail id"));
@@ -87,7 +87,7 @@ public class UserServiceImpl implements UserService {
 //    @Cacheable(value = "users", key = "#userId")
     @Override
     public UserDto getUserById(String userId){
-        System.out.println("Fetching from DB only for testing purpose");
+        System.out.print("Fetching from DB only for testing purpose");
         User user = userRepository
                 .findById(UserHelper.parseUUID(userId)).orElseThrow(() -> new ResourceNotFoundException("User not Found with the given id"));
         return modelMapper.map(user, UserDto.class);
