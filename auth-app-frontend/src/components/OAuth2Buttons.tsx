@@ -9,7 +9,8 @@ function OAuth2Buttons(){
             <div className="space-y-3">
                 <NavLink 
                 to={`${
-                    import.meta.env.VITE_BASE_URL || "http://localhost:8083"
+                    // import.meta.env.VITE_BASE_URL || "http://localhost:8083"
+                    import.meta.env.VITE_BASE_URL || "https://auth-app-platform.vercel.app/api/v1"
                 }/oauth2/authorization/google`} className={"block"}>
                     <Button
                         type="button"
@@ -21,7 +22,8 @@ function OAuth2Buttons(){
                 </NavLink>
                 
                 <NavLink to={`${
-                    import.meta.env.VITE_BASE_URL || "http://localhost:8083"
+                    // import.meta.env.VITE_BASE_URL || "http://localhost:8083"
+                    import.meta.env.VITE_BASE_URL || "https://auth-app-platform.vercel.app/api/v1"
                 }/oauth2/authorization/github`} className={"block"}>
                     <Button
                         type="button"
