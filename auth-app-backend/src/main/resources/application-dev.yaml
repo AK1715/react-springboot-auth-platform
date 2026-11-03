@@ -68,7 +68,7 @@ security:
 app:
   cors:
 #    front-end-url: http://localhost:5173
-    front-end-url: https://auth-app-frontend-xi-five.vercel.app/
+    front-end-url: https://auth-app-frontend-six.vercel.app/
   auth:
     frontend:
 #      success-redirect: http://localhost:5173/oauth/success
